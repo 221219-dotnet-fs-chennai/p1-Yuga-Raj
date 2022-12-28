@@ -1,0 +1,15 @@
+C:\Training2\p1-Yuga-Raj\HelloCSharp\bin\Debug\net6.0\HelloCSharp.exe
+C:\Training2\p1-Yuga-Raj\HelloCSharp\bin\Debug\net6.0\HelloCSharp.deps.json
+C:\Training2\p1-Yuga-Raj\HelloCSharp\bin\Debug\net6.0\HelloCSharp.runtimeconfig.json
+C:\Training2\p1-Yuga-Raj\HelloCSharp\bin\Debug\net6.0\HelloCSharp.dll
+C:\Training2\p1-Yuga-Raj\HelloCSharp\bin\Debug\net6.0\HelloCSharp.pdb
+C:\Training2\p1-Yuga-Raj\HelloCSharp\obj\Debug\net6.0\HelloCSharp.csproj.AssemblyReference.cache
+C:\Training2\p1-Yuga-Raj\HelloCSharp\obj\Debug\net6.0\HelloCSharp.GeneratedMSBuildEditorConfig.editorconfig
+C:\Training2\p1-Yuga-Raj\HelloCSharp\obj\Debug\net6.0\HelloCSharp.AssemblyInfoInputs.cache
+C:\Training2\p1-Yuga-Raj\HelloCSharp\obj\Debug\net6.0\HelloCSharp.AssemblyInfo.cs
+C:\Training2\p1-Yuga-Raj\HelloCSharp\obj\Debug\net6.0\HelloCSharp.csproj.CoreCompileInputs.cache
+C:\Training2\p1-Yuga-Raj\HelloCSharp\obj\Debug\net6.0\HelloCSharp.dll
+C:\Training2\p1-Yuga-Raj\HelloCSharp\obj\Debug\net6.0\refint\HelloCSharp.dll
+C:\Training2\p1-Yuga-Raj\HelloCSharp\obj\Debug\net6.0\HelloCSharp.pdb
+C:\Training2\p1-Yuga-Raj\HelloCSharp\obj\Debug\net6.0\HelloCSharp.genruntimeconfig.cache
+C:\Training2\p1-Yuga-Raj\HelloCSharp\obj\Debug\net6.0\ref\HelloCSharp.dll
