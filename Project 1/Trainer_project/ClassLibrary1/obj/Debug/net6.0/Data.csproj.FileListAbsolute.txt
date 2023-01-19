@@ -1,0 +1,12 @@
+C:\Training2\Trainer_project\ClassLibrary1\bin\Debug\net6.0\Data.deps.json
+C:\Training2\Trainer_project\ClassLibrary1\bin\Debug\net6.0\Data.dll
+C:\Training2\Trainer_project\ClassLibrary1\bin\Debug\net6.0\Data.pdb
+C:\Training2\Trainer_project\ClassLibrary1\obj\Debug\net6.0\Data.csproj.AssemblyReference.cache
+C:\Training2\Trainer_project\ClassLibrary1\obj\Debug\net6.0\Data.GeneratedMSBuildEditorConfig.editorconfig
+C:\Training2\Trainer_project\ClassLibrary1\obj\Debug\net6.0\Data.AssemblyInfoInputs.cache
+C:\Training2\Trainer_project\ClassLibrary1\obj\Debug\net6.0\Data.AssemblyInfo.cs
+C:\Training2\Trainer_project\ClassLibrary1\obj\Debug\net6.0\Data.csproj.CoreCompileInputs.cache
+C:\Training2\Trainer_project\ClassLibrary1\obj\Debug\net6.0\Data.dll
+C:\Training2\Trainer_project\ClassLibrary1\obj\Debug\net6.0\refint\Data.dll
+C:\Training2\Trainer_project\ClassLibrary1\obj\Debug\net6.0\Data.pdb
+C:\Training2\Trainer_project\ClassLibrary1\obj\Debug\net6.0\ref\Data.dll
