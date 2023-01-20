@@ -128,10 +128,10 @@ INSERT into project.[user](first_name,last_name,email_id,[password],phone_no)
 VALUES('Yuga','Raj','yugaraj31@gmail.com','987654321','861051669');
 
 INSERT into project.[user](first_name,last_name,email_id,[password],phone_no)
-VALUES('Yuvraj','Singh','yuvrajsingh12@gmail.com','987654321','861051669');
+VALUES('Razul','Md','razulmd@gmail.com','987654321','861051669');
 
 INSERT into project.[user](first_name,last_name,email_id,[password],phone_no)
-VALUES('Randy','Orton','randyorton@gmail.com','987654321','861051669');
+VALUES('Najum','Md','najummd@gmail.com','987654321','861051669');
 
 INSERT into project.skills(skill_name,skill_experience,us_id)
 VALUES('Trainer',10,2);
