@@ -36,6 +36,11 @@ public partial class User
     [Column("phone_no")]
     public long PhoneNo { get; set; }
 
+    [Column("city")]
+    [StringLength(100)]
+    [Unicode(false)]
+    public string City { get; set; } = null!;
+
     [InverseProperty("Us")]
     public virtual ICollection<Comp> Comps { get; } = new List<Comp>();
 

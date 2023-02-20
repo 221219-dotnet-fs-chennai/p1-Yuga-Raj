@@ -12,7 +12,7 @@ namespace trainer
 
         public LoginPage()
         {
-            Console.WriteLine("Welcome To Login Boss");
+            Console.WriteLine("Welcome To Login");
 
 
             bool runner = true;

@@ -4,11 +4,11 @@ using System.Collections;
 
 namespace BusinessLogic
 {
-    public class SkillLogic
+    public class SkillLogic : ICrud<ASkillModel, USkillModel>
     {
         public IList GetAll(int id)
         {
-            DataEf.Entities.YugarajContext cnt = new DataEf.Entities.YugarajContext();
+            DataEf.Entities.YugrajContext cnt = new DataEf.Entities.YugrajContext();
             var query = (from st in cnt.Skills
                          where st.UsId == id
                          select st).ToList();
@@ -34,11 +34,11 @@ namespace BusinessLogic
             skill.UsId = id;
 
 
-            DataEf.Entities.YugarajContext yugarajContext = new DataEf.Entities.YugarajContext();
-            yugarajContext.Skills.Add(skill);
+            DataEf.Entities.YugrajContext YugrajContext = new DataEf.Entities.YugrajContext();
+            YugrajContext.Skills.Add(skill);
 
 
-            int res = yugarajContext.SaveChanges();
+            int res = YugrajContext.SaveChanges();
 
             if (res > 0)
             {
@@ -54,10 +54,10 @@ namespace BusinessLogic
         public bool Delete(int id)
         {
             DataEf.Entities.Skill skill = new DataEf.Entities.Skill() { SkillId = id };
-            DataEf.Entities.YugarajContext yugarajContext = new DataEf.Entities.YugarajContext();
-            yugarajContext.Skills.Attach(skill);
-            yugarajContext.Skills.Remove(skill);
-            int k = yugarajContext.SaveChanges();
+            DataEf.Entities.YugrajContext YugrajContext = new DataEf.Entities.YugrajContext();
+            YugrajContext.Skills.Attach(skill);
+            YugrajContext.Skills.Remove(skill);
+            int k = YugrajContext.SaveChanges();
             if (k > 0)
             {
                 return true;
@@ -76,9 +76,9 @@ namespace BusinessLogic
             skill.SkillName = uSkillModel.SkillName;
             skill.SkillExperience = uSkillModel.SkillExperience;
             skill.UsId = id;
-            DataEf.Entities.YugarajContext yugarajContext = new DataEf.Entities.YugarajContext();
-            yugarajContext.Skills.Update(skill);
-            int j = yugarajContext.SaveChanges();
+            DataEf.Entities.YugrajContext YugrajContext = new DataEf.Entities.YugrajContext();
+            YugrajContext.Skills.Update(skill);
+            int j = YugrajContext.SaveChanges();
             if (j > 0)
             {
                 return true;

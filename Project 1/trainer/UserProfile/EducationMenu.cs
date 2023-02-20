@@ -74,7 +74,7 @@ namespace UserProfile
         }
         public void Update(int id)
         {
-            DataEf.Entities.YugarajContext cnt = new DataEf.Entities.YugarajContext();
+            DataEf.Entities.AbdulContext cnt = new DataEf.Entities.AbdulContext();
             var query = from st in cnt.Edus
                         where st.UsId == id
                         select st;
@@ -121,7 +121,7 @@ namespace UserProfile
         }
         public void Delete(int id)
         {
-            DataEf.Entities.YugarajContext cnt = new DataEf.Entities.YugarajContext();
+            DataEf.Entities.AbdulContext cnt = new DataEf.Entities.AbdulContext();
             var query = from st in cnt.Edus
                         where st.UsId == id
                         select st;

@@ -14,5 +14,6 @@
     <ProjectReference Include="..\BusinessLogic\BusinessLogic.csproj">
       <GlobalPropertiesToRemove></GlobalPropertiesToRemove>
     </ProjectReference>
+    <ProjectReference Include="..\UserProfile\UserProfile.csproj" />
   </ItemGroup>
 </Project>

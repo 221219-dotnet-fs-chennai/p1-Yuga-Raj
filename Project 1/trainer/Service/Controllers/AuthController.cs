@@ -20,8 +20,11 @@ namespace Service.Controllers
         public static string authId;
         public string AuthId { get; set; }
 
+
+        //[EnableCors(origins: "*", headers: "*", methods: "*")]
+
         [HttpPost]
-        public IActionResult post([FromBody] LoginClass loginClass)
+        public TokenClass post([FromBody] LoginClass loginClass)
         {
             Login login = new Login();
 
@@ -33,12 +36,17 @@ namespace Service.Controllers
                 authId = TokenGenerator.TokenGeneratorToken();
                 //AuthId = tk;
                 //authId = tk;
-                return Ok($"Token : {authId} {UserIdRecieved}");
+                TokenClass token = new TokenClass();
+                token.Token = authId;
+                //return Ok($"Token : {authId}");
+                return token;
             }
             else
             {
-
-                return Ok("Wrong EmailId Or Password");
+                TokenClass token = new TokenClass();
+                token.Token = "0";
+                return token;
+                //return Ok("Wrong EmailId Or Password");
             }
         }
 
@@ -56,9 +64,10 @@ namespace Service.Controllers
 
                     user1.FirstName = us.FirstName;
                     user1.LastName = us.LastName;
-                    user1.EmailId = us.Password;
+                    user1.EmailId = us.EmailId;
                     user1.Password = "";
                     user1.PhoneNo = us.PhoneNo;
+                    user1.City = us.City;
 
                 }
 
@@ -72,10 +81,11 @@ namespace Service.Controllers
 
         }
 
-        [HttpGet("Education")]
-        public IActionResult EducationList([FromBody] TokenClass tokenClass)
+        [HttpGet("Education/{token}")]
+        public IActionResult EducationList([FromRoute] string token)
         {
-            if (tokenClass.Token == authId)
+            //if (tokenClass.Token == authId)
+            if (token == authId)
             {
                 EducationLogic ed = new EducationLogic();
                 var qq = ed.GetAll(UserIdRecieved);
@@ -333,6 +343,42 @@ namespace Service.Controllers
             }
         }
 
+        [HttpGet("GetAll/{token}")]
+        public IActionResult GetAll([FromRoute] string token)
+        {
+            if (token == authId)
+            {
+                List<object> list = new List<object>();
+
+                //Edu
+                EducationLogic ed = new EducationLogic();
+                var qq = ed.GetAll(UserIdRecieved);
+                list.Add(qq);
+
+                //Skill
+                SkillLogic sk = new SkillLogic();
+                var q1 = sk.GetAll(UserIdRecieved);
+                list.Add(q1);
+
+                //Comp
+                CompLogic compLogic = new CompLogic();
+                var q2 = compLogic.GetAll(UserIdRecieved);
+                list.Add(q2);
+
+                //user details
+                Login login = new Login();
+                var q4 = login.getUser(UserIdRecieved);
+                list.Add(q4);
+
+                return Ok(list);
+            }
+            else
+            {
+                return Unauthorized("Wrong Token");
+            }
+        }
+
+
         [HttpPost("Logout")]
         public IActionResult LogOut([FromBody] TokenClass tokenClass)
         {
@@ -348,15 +394,7 @@ namespace Service.Controllers
                 return Unauthorized("Wrong Token");
             }
         }
-
-
-
-
     }
-
-
-
-
 }
 
 

@@ -8,7 +8,7 @@ namespace trainer
         public int k;
         public MainMenu()
         {
-            Console.WriteLine("Welcome!!");
+            Console.WriteLine("Welcome Boss!!");
             Console.WriteLine("");
             Console.WriteLine("0.Exit");
 
